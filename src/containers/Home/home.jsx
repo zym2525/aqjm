@@ -1,5 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import Nav from '../Nav/nav.jsx';
+
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -9,7 +11,10 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>Home</div>
+            <div>
+              <Nav/>
+              Home
+            </div>
         );
     }
 

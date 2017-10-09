@@ -1,8 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import {getCookie} from  '../util/cookie';
-import { hashHistory } from 'react-router';
-import Nav from './Nav/nav.jsx';
+
 
 import './index.less';
 class App extends React.Component {
@@ -16,7 +14,6 @@ class App extends React.Component {
   render(){
     return(
       <div className="wapper">
-        <Nav/>
         {
           this.state.initDone
             ? this.props.children
