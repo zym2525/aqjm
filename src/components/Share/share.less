@@ -1,0 +1,59 @@
+.share{
+  position: fixed;
+  top:50%;
+  width: 80px;
+  border:1px solid #e42779;
+  border-radius: 28px;
+  &.share-left{
+    left: 58px;
+    height: 290px;
+    margin-top: -149px;
+  }
+  &.share-right{
+    right: 58px;
+    height: 346px;
+    margin-top: -173px;
+  }
+  .share-item{
+    margin: 0 auto 1px;
+    cursor: pointer;
+    &.share-left-item{
+      width: 51px;
+      height:52px;
+      border-radius: 3px;
+      &:first-child{
+        margin-top: 58px;
+        background-image:url("../../../images/sina.jpg");
+      }
+      &:nth-child(2){
+        background-image:url("../../../images/zhihu.jpg");
+      }
+      &:nth-child(3){
+        background-image:url("../../../images/tieba.jpg");
+      }
+      &:last-child{
+        background-image:url("../../../images/weixin.jpg");
+      }
+    }
+    &.share-right-item{
+      width: 47px;
+      height: 48px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: 24px;
+      &:first-child{
+        margin-top: 58px;
+        background-image:url("../../../images/qq.jpg");
+      }
+      &:nth-child(2){
+        background-image:url("../../../images/dianhua.jpg");
+      }
+      &:nth-child(3){
+        background-image:url("../../../images/facebook.jpg");
+      }
+      &:last-child{
+        background-image:url("../../../images/erweima.jpg");
+      }
+    }
+  }
+}

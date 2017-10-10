@@ -11,19 +11,19 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="nav-bar clearfix">
-              <Link to="/" className="fl">
+              <Link to="/" className="fl" activeClassName="active">
                 <div className="list-item">首页</div>
               </Link>
-              <Link to="/about" className="fl">
+              <Link to="/about" className="fl" activeClassName="active">
                 <div className="list-item">关于我们</div>
               </Link>
-              <Link to="/service" className="fl">
+              <Link to="/service" className="fl" activeClassName="active">
                 <div className="list-item">服务</div>
               </Link>
-              <Link to="/case" className="fl">
+              <Link to="/case" className="fl" activeClassName="active">
                 <div className="list-item">案例</div>
               </Link>
-              <Link to="/contact" className="fl">
+              <Link to="/contact" className="fl" activeClassName="active">
                 <div className="list-item">联系</div>
               </Link>
             </div>
