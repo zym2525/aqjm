@@ -10,7 +10,7 @@ class BannerWrapper extends React.Component {
 
     render() {
         return (
-            <div className="banner-wrapper" style={{flex:1}}>
+            <div className="banner-wrapper" style={{height:'100%'}}>
               <Banner/>
             </div>
         );
