@@ -5,11 +5,11 @@
 // https://rsuitejs.com/getting-started
 import React from 'react';
 import Layer from 'react-layer';
-import {Modal} from 'antd';
+import {Modal,message} from 'antd';
 console.log(process.env.NODE_ENV)
 let imgUrl = require('../../images/loading1.gif');
 // https://github.com/BruceCham/react-cli/tree/master/src
-export const api = 'http://120.25.247.79';
+export const api = 'http://120.25.247.79/love';
 
 // 转化时间
 export function getLocalTime (dataTime) {
@@ -51,37 +51,10 @@ export function showInfo (content,title='提示') {
   });
   setTimeout(() => modal.destroy(), 800);
 }
-
-//获取url参数
-export function getFromUrl(key) {
-  var urlInfo = location.search.substring(1).split('&');
-  for (var i = 0; i < urlInfo.length; i++) {
-    var name = urlInfo[i].split('=')[0];
-    var value = urlInfo[i].split('=')[1];
-    if (key === name) {
-      return value;
-      break;
-    }
-  }
-  return '';
-}
-
-export function createData(type,id){
-  if(type==0){
-    return {
-      id:id
-    };
-  }else if(type==1){
-    return {
-      recordCode:id
-    };
-  }else if(type==2){
-    return {
-      openCode:id
-    };
-  }else if(type==3){
-    return {
-      graduationCode:id
-    };
-  }
+//message提示
+export function hint(type,content,duration=1.5){
+  message.config({
+    top: 200
+  });
+  message[type](content,duration)
 }

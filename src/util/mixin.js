@@ -1,6 +1,24 @@
-import * as Cookie from './cookie';
-import * as Common from  './common';
+export {
+  getCookie,
+  setCookie,
+  removeCookie,
+  setCookies,
+  removeCookies
+} from './cookie';
 
-console.log(Object.assign({},Cookie,Common))
-export default Object.assign({},Cookie,Common);
+export {
+  api,
+  getLocalTime,
+  toDou,
+  showSuccess,
+  showInfo,
+  hint
+} from  './common';
 
+export {
+  postData
+} from '../fetch/postData';
+
+export {
+  getData
+} from '../fetch/getData';

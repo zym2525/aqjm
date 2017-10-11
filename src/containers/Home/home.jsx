@@ -5,6 +5,7 @@ import BannerWrapper from './subPage/Banner/banner.jsx'
 import ShareLeft from '../../components/Share/shareLeft.jsx'
 import ShareRight from '../../components/Share/shareRight.jsx'
 
+
 import './home.less'
 class Home extends React.Component {
     constructor(props, context) {
@@ -27,7 +28,6 @@ class Home extends React.Component {
             </div>
         );
     }
-
     componentDidMount() {
 
     }

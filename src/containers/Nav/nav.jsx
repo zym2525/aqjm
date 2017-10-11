@@ -13,7 +13,7 @@ class Nav extends React.Component {
     render() {
         return (
             <div className="nav clearfix">
-              <h1 className="logo fl"></h1>
+              <h1 className="logo fl hide"></h1>
               <button className="test-btn fr">情感测试</button>
               <div className="nav-bar-wrapper fr">
                 <NavBar/>
