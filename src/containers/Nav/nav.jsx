@@ -26,12 +26,12 @@ class Nav extends React.Component {
     }
 
     componentDidMount() {
-      window.onscroll=()=>{
-        let scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-        this.setState({
-          needFade:scrollTop>0
-        })
-      };
+      //window.onscroll=()=>{
+      //  let scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+      //  this.setState({
+      //    needFade:scrollTop>0
+      //  })
+      //};
     }
 }
 export default Nav

@@ -1,6 +1,8 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import Nav from './Nav/nav.jsx';
+import Banner from '../components/Banner/banner.jsx'
+import Foot from './Foot/foot.jsx'
 
 import './index.less';
 class App extends React.Component {
@@ -16,7 +18,12 @@ class App extends React.Component {
       <div className="wapper">
         {
           this.state.initDone
-            ? this.props.children
+            ? <div className="content pt">
+                <Nav/>
+                <Banner />
+                {this.props.children}
+                <Foot/>
+              </div>
             :<div> Loading </div>
         }
       </div>
