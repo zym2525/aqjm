@@ -37,6 +37,7 @@ class NavBar extends React.Component {
 
     }
     tab(index){
+      document.documentElement.scrollTop = document.body.scrollTop = 0;
       this.setState({
         current:index
       });
