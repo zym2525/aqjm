@@ -1,56 +1,93 @@
 .about{
-  height:100%;
-  .about-us{
-    position: relative;
+  height:200%;
+  min-height: 554px;
+  .section-bg{
+    width:100%;
     height: 100%;
-    background: url("../../../images/bg-about.jpg") ;
-    overflow: hidden;
-    ul{
-      margin-top: 62px;
-      .list-item{
-        width: 100%;
-        height: 164px;
-        position: relative;
-        .icon{
-          width: 175px;
+    position: absolute;
+    top:0;
+    left: 0;
+    text-align: center;
+    font-size: 48px;
+    line-height: 136px;
+  }
+  .about-wrapper {
+    height: 50%;
+    position: relative;
+    min-height: 554px;
+    .section-bg{
+      color: #e6e6e6;
+      background: url("../../../images/bg-about.jpg");
+    }
+    .about-us{
+      position: absolute;
+      height: 100%;
+      overflow: hidden;
+      top:0;
+      left: 50%;
+      margin-left:-506px;
+      ul{
+        margin-top: 62px;
+        li{
+
+        }
+        .list-item{
+          width: 100%;
           height: 164px;
-          background: no-repeat center;
-          &:first-child{
-            background-image: url(../../../images/jxzz.jpg);
+          position: relative;
+          margin-top: -46px;
+          .icon{
+            width: 175px;
+            height: 164px;
+            background: no-repeat center;
+            &:first-child{
+              background-image: url(../../../images/jxzz.jpg);
+            }
           }
-        }
-        .text{
-          position: absolute;
-          width: 70%;
-          top:50%;
-          transform:translateY(-50%);
-          &.right{
-            right: 175px;
+          .text{
+            position: absolute;
+            width: 70%;
+            top:50%;
+            transform:translateY(-50%);
+            &.right{
+              right: 175px;
+            }
+            &.one{
+              color: #059695;
+            }
+            &.two{
+              color: #f96;
+            }
+            &.three{
+              color: #059695;
+            }
+            &.four{
+              color: #acacff;
+            }
           }
-          &.one{
-            color: #059695;
+          &:nth-child(2n+1){
+            float: left;
           }
-          &.two{
-            color: #f96;
+          &:nth-child(2n+0){
+            float: right;
           }
-          &.three{
-            color: #059695;
-          }
-          &.four{
-            color: #acacff;
-          }
-        }
-        &:nth-child(2n+1){
-          float: left;
-        }
-        &:nth-child(2n+0){
-          float: right;
         }
       }
     }
   }
-  .our-team{
-    height: 100%;
+  .our-team-wrapper{
+    height:50%;
     position: relative;
+    min-height: 375px;
+    .section-bg{
+      color: #f5e7e6;
+    }
+    .our-team{
+      height: 100%;
+      position: absolute;
+      top:0;
+      left: 50%;
+      margin-left:-506px;
+    }
   }
 }
