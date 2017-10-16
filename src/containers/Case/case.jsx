@@ -1,6 +1,8 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import Layout from '../../containers/Layout/_layout.jsx'
+import {api,postData} from '../../util/mixin'
+import {arrText} from '../../config/case'
 
 import './case.less';
 
@@ -14,16 +16,7 @@ class Case extends React.Component {
     }
 
     render() {
-        let arrText=[
-          {
-            text:'情感咨询'
-          },
-          {
-            text:'婚姻挽回'
-          },
-          {
-            text:'两性课堂'
-          }];
+
         return (
             <div className="case">
               <Layout bgTitle="SEVICE CASES" title="服务案例" bgClass="case-bg" tClass="case-t">
@@ -38,7 +31,19 @@ class Case extends React.Component {
                       )}
                     </ul>
                     <div className="case-content-right fr">
-                      <img src="123" alt="123"/>
+                      <img src="123" alt="123" className="fl"/>
+                      <div className="line-box fl">
+                        <div className="dot"></div>
+                        <div className="line"></div>
+                        <div className="dot"></div>
+                      </div>
+                      <div className="case-article">
+                        <h3 className="article-title">魅力游戏第二关</h3>
+                        <div className="article-content">
+                          司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境司法考试焚枯食淡讲课费复合大师空间发挥的空间划分空间的环境
+                        </div>
+                        食复合大师...<a className="more">[查看更多]</a>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -48,7 +53,11 @@ class Case extends React.Component {
     }
 
     componentDidMount() {
-
+      let data={
+        type:10
+      };
+      postData(api+'/api/theme/list',data,(result)=>{
+      });
     }
     handleTab(index){
       this.setState({

@@ -21,6 +21,7 @@ export function postData (url, data, successfn, isLoadingShow) {
     // if(oDiv) document.getElementsByTagName('body')[0].removeChild(oDiv);
     layer && layer.destroy()
   }).catch(err => {
+    console.log(err)
     alert('出错了！请刷新页面试试~')
     layer && layer.destroy()
   })
