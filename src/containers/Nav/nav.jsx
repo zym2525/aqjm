@@ -17,7 +17,7 @@ class Nav extends React.Component {
         return (
             <div className={this.state.needFade?'nav fade':'nav'}>
               <div className="contentW clearfix" style={{margin:'0 auto'}}>
-                <h1 className="logo fl hide"></h1>
+                <h1 className="logo fl"></h1>
                 <button className="test-btn fr">情感测试</button>
                 <div className="nav-bar-wrapper fr">
                   <NavBar/>

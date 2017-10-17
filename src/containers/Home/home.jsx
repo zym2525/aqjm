@@ -21,8 +21,8 @@ class Home extends React.Component {
               <ReactCSSTransitionGroup
                 transitionName="slideIn"
                 component="div"
-                transitionEnterTimeout={800}
-                transitionLeaveTimeout={800}>
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={500}>
                 {this.state.isShow &&
                 <div className="share-wrapper"  key={1}>
                   <ShareLeft ref="left"/>

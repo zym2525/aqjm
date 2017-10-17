@@ -4,11 +4,15 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import './about.less'
 class About extends React.Component {
     constructor(props, context) {
-        super(props, context)
-        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+      super(props, context)
+      this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+      this.state={
+        currentIndex:0
+      };
     }
 
     render() {
+        const arr=['one','two','three','four','five'];
         return (
             <div className="about">
               <section className="about-wrapper">
@@ -47,6 +51,22 @@ class About extends React.Component {
                 <div className="section-bg">OUR TEAM</div>
                 <section className="our-team contentW">
                   <div className="m-title">我们的团队</div>
+                  <div className="view-box clearfix">
+                    <div className="view-left fl"></div>
+                    <div className="view-right fl">
+                      <div className="desc">
+                        <h3>周建杰(JeKing) ——创始人/首席情感咨询师</h3>
+                        <div className="desc-content">和爱是空间发挥加快速度画法几何辅导费静待花开飞机上的结果合法的机构获得</div>
+                        <ul className="other-list clearfix">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ul>
+                        <em className="desc-line"></em>
+                      </div>
+                    </div>
+                  </div>
                 </section>
               </section>
             </div>

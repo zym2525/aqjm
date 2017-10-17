@@ -1,3 +1,65 @@
 .contact{
-  height: 100%;
+  height: 930px;
+  .contact-bg{
+    background-color: #f4f4f4;
+    color: #ededed;
+  }
+  .section-wrapper .c-section{
+    left: 0;
+    margin-left: 0;
+  }
+  .contentW{
+    width: 100%;
+  }
+  .partner-box{
+    height: 388px;
+    margin-top: 98px;
+    background-image: url(../../../images/panter-bg.png);
+    background-position-y: -96px;
+    position: relative;
+    .partner-wrapper{
+      width: 994px;
+      height: 138px;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      margin-left: -497px;
+      margin-top: -69px;
+      background-color: #fff;
+      padding: 24px 125px 18px;
+      a{
+        position: absolute;
+        width: 13px;
+        height: 24px;
+        top:50%;
+        margin-top: -12px;
+        &.btn-left{
+          left: 82px;
+        }
+        &.btn-right{
+          right: 88px;
+        }
+      }
+    }
+    .partners{
+      width: 744px;
+      height: 96px;
+      overflow: hidden;
+    }
+    .partner{
+      width: 744px;
+      height: 96px;
+      transition: all 0.3s ease-in;
+      li{
+        float: left;
+        width: 137px;
+        height: 96px;
+        border:1px solid #ddd;
+        margin-left: 14px;
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
