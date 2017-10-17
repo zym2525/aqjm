@@ -24,19 +24,19 @@ class About extends React.Component {
                     </li>
                     <li className="clearfix">
                       <div className="list-item">
-                        <i className="icon fr"></i>
+                        <i className="icon sec fr"></i>
                         <span className="text right two">储备有两性心理分析师来帮助客户快速了解两性的心理活动，进行沙盘模拟实践，加深对两性的 心理了解，掌握对两性心理的熟悉度。</span>
                       </div>
                     </li>
                     <li className="clearfix">
                       <div className="list-item">
-                        <i className="icon fl"></i>
+                        <i className="icon th fl"></i>
                         <span className="text three">缩小服务类型，精简师资力量，只为了使爱情解码更专业。让客户享受到一对一甚至多对一 的优质的情感服务。</span>
                       </div>
                     </li>
                     <li className="clearfix">
                       <div className="list-item">
-                        <i className="icon fr"></i>
+                        <i className="icon four fr"></i>
                         <span className="text right four">服务有完善的售后保障，导师针对性的指导方式，并且终生复训，享受“爱情解码” 合作全部商家的优惠。</span>
                       </div>
                     </li>

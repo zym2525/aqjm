@@ -22,7 +22,7 @@ export function postData (url, data, successfn, isLoadingShow) {
     layer && layer.destroy()
   }).catch(err => {
     console.log(err)
-    alert('出错了！请刷新页面试试~')
+    //alert('出错了！请刷新页面试试~')
     layer && layer.destroy()
   })
 }

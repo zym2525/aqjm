@@ -22,3 +22,5 @@ export {
 export {
   getData
 } from '../fetch/getData';
+
+export {classnames} from 'classnames';
