@@ -12,7 +12,8 @@ export {
   toDou,
   showSuccess,
   showInfo,
-  hint
+  hint,
+  createMap
 } from  './common';
 
 export {

@@ -58,3 +58,23 @@ export function hint(type,content,duration=1.5){
   });
   message[type](content,duration)
 }
+
+//生成地图
+export function createMap(id,address,labels){
+// 百度地图API功能
+  var map = new BMap.Map(id);    // 创建Map实例
+  map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+  map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+  var localSearch = new BMap.LocalSearch(map);
+  localSearch.setSearchCompleteCallback(function (searchResult) {
+    var poi = searchResult.getPoi(0);
+    var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
+    if(labels!=''){
+      var label = new BMap.Label(labels,{offset:new BMap.Size(20,-10)});
+      marker.setLabel(label); //添加百度label
+    }
+    map.centerAndZoom(new BMap.Point(poi.point.lng, poi.point.lat), 17);  // 初始化地图,设置中心点坐标和地图级别
+    map.addOverlay(marker);
+  });
+  localSearch.search(address);
+}

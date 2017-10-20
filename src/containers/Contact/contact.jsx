@@ -1,6 +1,8 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import Layout from '../../containers/Layout/_layout.jsx'
+import {partners} from '../../config/contact'
+import {createMap} from '../../util/mixin'
 
 import './contact.less'
 class Contact extends React.Component {
@@ -8,8 +10,7 @@ class Contact extends React.Component {
         super(props, context)
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state={
-          index:0,
-          arr:[1,1,1,1,1,1,1]
+          index:0
         };
     }
 
@@ -20,8 +21,8 @@ class Contact extends React.Component {
                 <div className="partner-box">
                   <div className="partner-wrapper">
                     <div className="partners">
-                      <ul className="partner clearfix" ref="partners">
-                        {this.state.arr.map((item,index)=>
+                      <ul className="partner clearfix" ref="partners" style={{width:`${(137+14)*partners.length-14}px`}}>
+                        {partners.map((item,index)=>
                           <li key={index}>{index+1}</li>
                         )}
                       </ul>
@@ -30,13 +31,20 @@ class Contact extends React.Component {
                     <a className="btn-right" onClick={this.handleRight.bind(this)}>right</a>
                   </div>
                 </div>
+                <div className="address-box">
+                  <div className="map-wrapper">
+                    <ul className="address-info">
+                      <li></li>
+                    </ul>
+                    <div id="map"></div>
+                  </div>
+                </div>
               </Layout>
             </div>
         );
     }
   componentDidMount(){
-    let oParnter=this.refs.partners;
-    oParnter.style.width=`${(137+14)*this.state.arr.length-14}px`;
+    createMap('map','广州市番禺区亚运城媒体南区5座1204号',"爱情解码");
   }
   componentDidUpdate() {
     let {index}=this.state;
@@ -52,8 +60,8 @@ class Contact extends React.Component {
     });
   }
   handleRight(){
-    let {index,arr}=this.state;
-    if (index == arr.length-5) return;
+    let {index}=this.state;
+    if (index == partners.length-5) return;
     this.setState((oldState)=>{
       return {
         index:oldState.index+1
