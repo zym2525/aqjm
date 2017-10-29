@@ -23,7 +23,7 @@ class Contact extends React.Component {
                     <div className="partners">
                       <ul className="partner clearfix" ref="partners" style={{width:`${(137+14)*partners.length-14}px`}}>
                         {partners.map((item,index)=>
-                          <li key={index}>{index+1}</li>
+                          <li key={index}></li>
                         )}
                       </ul>
                     </div>
