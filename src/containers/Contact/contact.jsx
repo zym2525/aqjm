@@ -27,8 +27,8 @@ class Contact extends React.Component {
                         )}
                       </ul>
                     </div>
-                    <a className="btn-left" onClick={this.handleLeft.bind(this)}>left</a>
-                    <a className="btn-right" onClick={this.handleRight.bind(this)}>right</a>
+                    <a className="btn-left" onClick={this.handleLeft.bind(this)}></a>
+                    <a className="btn-right" onClick={this.handleRight.bind(this)}></a>
                   </div>
                 </div>
                 <div className="address-box">
