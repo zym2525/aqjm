@@ -1,0 +1,96 @@
+.questionnaire-wrapper{
+  padding-top: 22px;
+  height: 600px;
+  background: url(../../../images/map-bg.jpg);
+  .questionnaire{
+    background-color: #fff;
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #e5e5e5;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-top: 44px;
+    .questionnaire-top{
+      width: 1234px;
+      height: 131px;
+      background-image: url("../../../images/q-top.png");
+      margin-left: -117px;
+    }
+    .table-wrapper{
+      width: 968px;
+      margin: 0 auto 34px;
+    }
+  }
+}
+
+
+//Exercise
+.exercise{
+  font-size: 18px;
+  line-height: 1;
+  .exercise-content{
+    color: #841354;
+    margin-bottom: 12px;
+  }
+  .exercise-answer{
+    color: #000;
+    li{
+      margin-right: 15px;
+      &:last-child{
+        margin-right: 0;
+      }
+      cursor: pointer;
+      &.active{
+        color: #841354;
+      }
+    }
+  }
+}
+
+//editable
+.ant-table-thead{
+  display: none;
+}
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-input-wrapper,
+.editable-cell-text-wrapper {
+  padding-right: 24px;
+}
+
+.editable-cell-text-wrapper {
+  padding: 5px 24px 5px 5px;
+}
+
+.editable-cell-icon,
+.editable-cell-icon-check {
+  position: absolute;
+  right: 0;
+  width: 20px;
+  cursor: pointer;
+}
+
+.editable-cell-icon {
+  line-height: 18px;
+  display: none;
+}
+
+.editable-cell-icon-check {
+  line-height: 28px;
+}
+
+.editable-cell:hover .editable-cell-icon {
+  display: inline-block;
+}
+
+.editable-cell-icon:hover,
+.editable-cell-icon-check:hover {
+  color: #108ee9;
+}
+
+.editable-add-btn {
+  margin-bottom: 8px;
+}
