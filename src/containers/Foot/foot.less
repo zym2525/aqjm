@@ -2,4 +2,56 @@
   height: 100%;
   background: url("../../../images/home-footer.jpg") no-repeat center;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+  .f-logo{
+
+  }
+  .test-btn{
+    width: 249px;
+    height: 133px;
+    background-image: url("../../../images/ceshi.png");
+    position: absolute;
+    top:170px;
+    right:146px;
+    cursor: pointer;
+  }
+  .foot-content{
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    margin-left: -264px;
+    .f-nav{
+      a{
+        color: #fff;
+        line-height: 38px;
+      }
+      li:not(.line){
+        float: left;
+        padding:0 30px;
+        &:first-child{
+          padding-left: 0;
+        }
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+      .line{
+        float: left;
+        width: 24px;
+        height: 38px;
+        background-image: url("../../../images/f-line.png");
+      }
+    }
+    .f-text{
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      &.f-text1{
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+
+    }
+  }
 }

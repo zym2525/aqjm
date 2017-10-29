@@ -5,14 +5,18 @@ import Layout from '../../containers/Layout/_layout.jsx'
 import './textList.less'
 class TextList extends React.Component {
     constructor(props, context) {
-        super(props, context)
-        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+      super(props, context)
+      this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+      this.state={
+        currentIndex:0
+      }
     }
 
     render() {
+        let {bgTitle,arrText,title}=this.props;
         return (
           <div className="case">
-            <Layout bgTitle="SEVICE CASES" title="服务案例" bgClass="case-bg" tClass="case-t">
+            <Layout bgTitle={bgTitle} title={title} bgClass="case-bg" tClass="case-t">
               <section className="case-box">
                 <div className="case-content clearfix">
                   <ul className="case-content-left fl">

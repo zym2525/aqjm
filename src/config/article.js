@@ -3,11 +3,11 @@
  */
 export const arrText=[
   {
-    text:'情感咨询'
+    text:'最新文章'
   },
   {
-    text:'婚姻挽回'
+    text:'恋爱秘籍'
   },
   {
-    text:'两性课堂'
+    text:'魅力游戏'
   }];

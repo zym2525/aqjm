@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import Layout from '../../containers/Layout/_layout.jsx'
-import {partners} from '../../config/contact'
+import {partners,address} from '../../config/contact'
 import {createMap} from '../../util/mixin'
 
 import './contact.less'
@@ -32,10 +32,14 @@ class Contact extends React.Component {
                   </div>
                 </div>
                 <div className="address-box">
+                  <dl className="address-info">
+                    <dt>联系我们</dt>
+                    <dd>{address.Email}</dd>
+                    <dd>{address.Cel}</dd>
+                    <dd>{address.WeChat}</dd>
+                    <dd>{address.Add}</dd>
+                  </dl>
                   <div className="map-wrapper">
-                    <ul className="address-info">
-                      <li></li>
-                    </ul>
                     <div id="map"></div>
                   </div>
                 </div>

@@ -20,7 +20,9 @@ class App extends React.Component {
           this.state.initDone
             ? <div className="content pt">
                 <Nav/>
-                <Banner />
+                {
+                  this.props.location.pathname.indexOf('questionnaire')==-1&&<Banner />
+                }
                 {this.props.children}
                 <Foot/>
               </div>

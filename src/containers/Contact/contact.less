@@ -58,9 +58,22 @@
         height: 96px;
         border:1px solid #ddd;
         margin-left: 14px;
+        background-position: -1px -1px;
         &:first-child{
           margin-left: 0;
+          background-image: url("../../../images/jrtt.png");
+        }
+        &:nth-child(2){
           background-image: url("../../../images/baidu.png");
+        }
+        &:nth-child(3){
+          background-image: url("../../../images/xinlang.png");
+        }
+        &:nth-child(4){
+          background-image: url("../../../images/zhihu.png");
+        }
+        &:nth-child(5){
+          background-image: url("../../../images/wangyi.png");
         }
       }
     }
@@ -69,6 +82,23 @@
     height:447px;
     background: url("../../../images/map-bg.jpg");
     position: relative;
+    .address-info{
+      height: 258px;
+      position: absolute;
+      top:50%;
+      margin-top: -129px;
+      left:74px;
+      color: #232120;
+      dt{
+        line-height: 1;
+        font-size: 26px;
+        margin-bottom: 14px;
+      }
+      dd{
+        font-size: 20px;
+        line-height: 54px;
+      }
+    }
     .map-wrapper{
       width: 408px;
       height: 419px;
