@@ -19,23 +19,23 @@ class Foot extends React.Component {
             <section className="foot-content">
               <ul className="f-nav clearfix">
                 <li onClick={this.tab.bind(this)}>
-                  <Link>首页</Link>
+                  <Link to="/">首页</Link>
                 </li>
                 <li className="line"></li>
                 <li onClick={this.tab.bind(this)}>
-                  <Link>关于我们</Link>
+                  <Link to="/about">关于我们</Link>
                 </li>
                 <li className="line"></li>
                 <li onClick={this.tab.bind(this)}>
-                  <Link>服务</Link>
+                  <Link to="/service">服务</Link>
                 </li>
                 <li className="line"></li>
                 <li onClick={this.tab.bind(this)}>
-                  <Link>案例</Link>
+                  <Link to="/case">案例</Link>
                 </li>
                 <li className="line"></li>
                 <li onClick={this.tab.bind(this)}>
-                  <Link>联系</Link>
+                  <Link to="/contact">联系</Link>
                 </li>
               </ul>
               <div className="f-text1 f-text">XXX © 2017.All Rights Reserved</div>

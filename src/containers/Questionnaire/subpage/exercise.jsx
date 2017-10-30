@@ -9,14 +9,14 @@ class Exercise extends React.Component {
     }
 
     render() {
-      let {content,index,answers}=this.props;
+      let {content,index,answers,type}=this.props;
         return (
             <div className="exercise">
               <div className="exercise-content">{index}.{content}:</div>
               <ul className="exercise-answer clearfix">
                 {
                   answers.map((answer,index)=>
-                    <li onClick={this.handleClick.bind(this,answer)} className="fl" key={index}>{arr[index]}{answer}</li>
+                    <li onClick={this.handleClick.bind(this,answer)} className={type==1?'fl':''} key={index}>{arr[index]}{answer}</li>
                   )
                 }
               </ul>

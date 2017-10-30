@@ -2,7 +2,7 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import EditableTable from './subpage/editableTable.jsx'
 import Exercise from './subpage/Exercise.jsx'
-import {questionnaireTop} from '../../config/questionnaire'
+import {questionnaireTop,exercises} from '../../config/questionnaire'
 
 import './questionnaire.less'
 class Questionnaire extends React.Component {
@@ -24,10 +24,27 @@ class Questionnaire extends React.Component {
                 {
                   questionnaireTop.map((item,index)=>
                     <div key={index} className="exercise-cell">
-                      <Exercise content={item.content} answers={item.answers} index={index+1}/>
+                      <Exercise type={1} content={item.content} answers={item.answers} index={index+1}/>
                     </div>
                   )
                 }
+                <div className="exercise-text">
+                  <div className="exercise-content">3.觉得你自己主要存在的问题有哪些？</div>
+                  <textarea ></textarea>
+                </div>
+                <div className="exercise-text">
+                  <div className="exercise-content">4.是否需要导师给你制定一份学习计划？</div>
+                  <textarea ></textarea>
+                </div>
+                <div className="questionnaire-mid"></div>
+                {
+                  exercises.map((exercise,index)=>
+                    <div key={index} className="exercise-cell">
+                      <Exercise content={exercise.content} answers={exercise.answers} index={index+1}/>
+                    </div>
+                  )
+                }
+                <div className="questionnaire-bottom"></div>
               </section>
             </div>
         );

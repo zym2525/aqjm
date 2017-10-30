@@ -1,6 +1,8 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { Carousel } from 'antd';
+import {api} from '../../util/common';
+import {postData} from '../../fetch/postData'
 
 import './banner.less'
 class Banner extends React.Component {
@@ -21,7 +23,11 @@ class Banner extends React.Component {
     }
 
     componentDidMount() {
-
+      let data={
+        type:30
+      };
+      postData(api+'/api/theme/list',data,(result)=>{
+      });
     }
 }
 export default Banner

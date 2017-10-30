@@ -52,7 +52,7 @@ class About extends React.Component {
                 <section className="our-team contentW">
                   <div className="m-title">我们的团队</div>
                   <div className="view-box clearfix">
-                    <div className="view-left fl photo1"></div>
+                    <div className={`view-left fl photo${this.state.currentIndex+1}`}></div>
                     <div className="view-right fl">
                       <div className="desc">
                         <h3>{abouts[this.state.currentIndex].name} --{abouts[this.state.currentIndex].desc}</h3>

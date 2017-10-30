@@ -1,11 +1,9 @@
 .questionnaire-wrapper{
   padding-top: 22px;
-  height: 600px;
   background: url(../../../images/map-bg.jpg);
   .questionnaire{
     background-color: #fff;
     width: 1000px;
-    height: 600px;
     margin: 0 auto;
     border: 1px solid #e5e5e5;
     border-top-left-radius: 40px;
@@ -21,12 +19,26 @@
       width: 968px;
       margin: 0 auto 34px;
     }
+    .questionnaire-mid{
+      width: 923px;
+      height: 75px;
+      background-image: url(../../../images/q-middle.png);
+      margin: 0 auto 92px;
+    }
+    .questionnaire-bottom{
+      width: 1064px;
+      height: 490px;
+      background-image:url("../../../images/q-bottom.png");
+      margin-left: -38px;
+    }
   }
 }
 
 
 //Exercise
 .exercise{
+  width: 880px;
+  margin: 0 auto;
   font-size: 18px;
   line-height: 1;
   .exercise-content{
@@ -45,6 +57,33 @@
         color: #841354;
       }
     }
+  }
+}
+.exercise-cell{
+  margin-bottom: 44px;
+  &:nth-child(5){
+    margin-bottom: 72px;
+  }
+}
+.exercise-text{
+  font-size: 18px;
+  line-height: 1;
+  margin: 0 auto 14px;
+  width: 873px;
+  &:last-child{
+    margin-bottom: 34px;
+  }
+  .exercise-content{
+    color: #841354;
+    margin-bottom: 12px;
+  }
+  textarea{
+    resize: none;
+    border: 1px solid #841354;
+    width: 873px;
+    height: 163px;
+    padding: 10px;
+    color: #222;
   }
 }
 
