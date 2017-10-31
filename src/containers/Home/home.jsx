@@ -3,6 +3,11 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import ShareLeft from '../../components/Share/shareLeft.jsx'
 import ShareRight from '../../components/Share/shareRight.jsx'
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import About from '../About/about.jsx'
+import Service from '../Service/service.jsx'
+import Case from '../Case/case.jsx'
+import Contact from '../Contact/contact.jsx'
+import Foot from '../Foot/foot.jsx'
 
 import './home.less'
 import '../../static/css/animation.less'
@@ -30,7 +35,13 @@ class Home extends React.Component {
                 </div>
                 }
               </ReactCSSTransitionGroup>
+                <About/>
+                <Service/>
+                <Case/>
+                <Contact/>
+                <Foot/>
             </div>
+
         );
     }
     componentDidMount() {

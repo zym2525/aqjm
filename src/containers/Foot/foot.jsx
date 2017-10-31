@@ -35,7 +35,7 @@ class Foot extends React.Component {
                 </li>
                 <li className="line"></li>
                 <li onClick={this.tab.bind(this)}>
-                  <Link to="/contact">联系</Link>
+                  <Link to="/article">文章</Link>
                 </li>
               </ul>
               <div className="f-text1 f-text">XXX © 2017.All Rights Reserved</div>

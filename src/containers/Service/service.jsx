@@ -3,6 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import Layout from '../../containers/Layout/_layout.jsx'
 import {list} from '../../config/service'
 import More from './subPage/More.jsx'
+import {hashHistory} from 'react-router'
 
 import './service.less'
 class Service extends React.Component {
@@ -25,7 +26,7 @@ class Service extends React.Component {
                       </div>
                       <img src={item.src} alt={item.src}/>
                       <div className="btn-wrapper">
-                        <More moreFn={this.moreClick.bind(this)}/>
+                        <More moreFn={this.moreClick.bind(this,index)}/>
                       </div>
                     </li>
                   )}
@@ -41,8 +42,8 @@ class Service extends React.Component {
     componentDidMount() {
 
     }
-    moreClick(){
-
+    moreClick(index){
+      hashHistory.push('/detail/'+(index+1));
     }
 }
 export default Service

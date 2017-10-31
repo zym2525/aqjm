@@ -24,7 +24,9 @@ class App extends React.Component {
                   this.props.location.pathname.indexOf('questionnaire')==-1&&<Banner />
                 }
                 {this.props.children}
-                <Foot/>
+                {
+                  this.props.location.pathname!=='/'&&<Foot />
+                }
               </div>
             :<div> Loading </div>
         }

@@ -30,8 +30,8 @@ class NavBar extends React.Component {
                 <div className='list-item' onClick={this.tab.bind(this,3)}>案例</div>
               </Link>
               <div className="line fl"></div>
-              <Link to="/contact" className="fl" activeClassName="active">
-                <div className='list-item' onClick={this.tab.bind(this,4)}>联系</div>
+              <Link to="/article" className="fl" activeClassName="active">
+                <div className='list-item' onClick={this.tab.bind(this,4)}>文章</div>
               </Link>
             </div>
         );

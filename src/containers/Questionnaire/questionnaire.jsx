@@ -3,6 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import EditableTable from './subpage/editableTable.jsx'
 import Exercise from './subpage/Exercise.jsx'
 import {questionnaireTop,exercises} from '../../config/questionnaire'
+import { Button } from 'antd';
 
 import './questionnaire.less'
 class Questionnaire extends React.Component {
@@ -16,7 +17,7 @@ class Questionnaire extends React.Component {
 
         return (
             <div className="questionnaire-wrapper">
-              <section className="questionnaire">
+              <section className="questionnaire" ref="questionnaire">
                 <div className="questionnaire-top"></div>
                 <div className="table-wrapper">
                   <EditableTable/>
@@ -29,11 +30,11 @@ class Questionnaire extends React.Component {
                   )
                 }
                 <div className="exercise-text">
-                  <div className="exercise-content">3.觉得你自己主要存在的问题有哪些？</div>
-                  <textarea ></textarea>
+                  <div className="exercise-content">4.觉得你自己主要存在的问题有哪些？</div>
+                  <textarea></textarea>
                 </div>
                 <div className="exercise-text">
-                  <div className="exercise-content">4.是否需要导师给你制定一份学习计划？</div>
+                  <div className="exercise-content">5.是否需要导师给你制定一份学习计划？</div>
                   <textarea ></textarea>
                 </div>
                 <div className="questionnaire-mid"></div>
@@ -44,6 +45,7 @@ class Questionnaire extends React.Component {
                     </div>
                   )
                 }
+                <Button type="primary" className="exercise-btn">提交</Button>
                 <div className="questionnaire-bottom"></div>
               </section>
             </div>

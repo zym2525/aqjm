@@ -1,11 +1,15 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import classnames from 'classnames'
 const arr=['A','B','C','D','E','F','G'];
 
 class Exercise extends React.Component {
     constructor(props, context) {
         super(props, context)
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+      this.state={
+        current:-1
+      };
     }
 
     render() {
@@ -16,7 +20,7 @@ class Exercise extends React.Component {
               <ul className="exercise-answer clearfix">
                 {
                   answers.map((answer,index)=>
-                    <li onClick={this.handleClick.bind(this,answer)} className={type==1?'fl':''} key={index}>{arr[index]}{answer}</li>
+                    <li onClick={this.handleClick.bind(this,answer,index)} className={classnames({'fl':type==1},{'active':this.state.current==index})} key={index}>{arr[index]}{answer}</li>
                   )
                 }
               </ul>
@@ -24,8 +28,10 @@ class Exercise extends React.Component {
         );
     }
 
-    handleClick() {
-
+    handleClick(answer,index) {
+      this.setState({
+        current:index
+      });
     }
 }
 export default Exercise
