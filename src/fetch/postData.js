@@ -11,10 +11,10 @@ export function postData (url, data, successfn, isLoadingShow) {
   result.then(res => {
     return res.text()
   }).then(text => {
-    let reData = JSON.parse(JSON.parse(text))
+    let reData = JSON.parse(text)
     console.log(reData)
-    if (reData.retCode == '0000') {
-      successfn && successfn(reData)
+    if (reData.code == '0000') {
+      successfn && successfn(reData.data)
     } else {
       alert(reData.retMsg)
     }
