@@ -13,14 +13,14 @@ class Exercise extends React.Component {
     }
 
     render() {
-      let {content,index,answers,type}=this.props;
+      let {content,index,answers,type,serial}=this.props;
         return (
             <div className="exercise">
               <div className="exercise-content">{index}.{content}:</div>
               <ul className="exercise-answer clearfix">
                 {
                   answers.map((answer,index)=>
-                    <li onClick={this.handleClick.bind(this,answer,index)} className={classnames({'fl':type==1},{'active':this.state.current==index})} key={index}>{arr[index]}{answer}</li>
+                    <li onClick={this.handleClick.bind(this,index)} className={classnames({'fl':type==1},{'active':this.state.current==index})} key={index}>{serial==2?`${index+1}.`:arr[index]}{answer}</li>
                   )
                 }
               </ul>
@@ -28,9 +28,13 @@ class Exercise extends React.Component {
         );
     }
 
-    handleClick(answer,index) {
+    handleClick(index) {
+      let {serial}=this.props;
       this.setState({
         current:index
+      },()=>{
+        let answer=serial==2?1:arr[index]
+        this.props.getAnswer(answer,this.props.index-1,this.props.type);
       });
     }
 }

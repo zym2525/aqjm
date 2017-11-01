@@ -43,7 +43,7 @@ class Service extends React.Component {
 
     }
     moreClick(index){
-      hashHistory.push('/detail/'+(index+1));
+      //hashHistory.push('/detail/'+(index+1));
     }
 }
 export default Service

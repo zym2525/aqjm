@@ -18,6 +18,40 @@
     .table-wrapper{
       width: 968px;
       margin: 0 auto 34px;
+      border:1px solid #9babb8;
+      .table-row{
+        height: 49px;
+        border-bottom:1px solid #9babb8;
+        margin-bottom: -1px;
+        display: flex;
+        text-align: center;
+        line-height: 48px;
+        font-size: 18px;
+        color: #9babb8;
+        input{
+          width:150px;
+          height: 46px;
+          border: none;
+          margin-left: 1px;
+          margin-top: 1px;
+          text-align: center;
+          &:focus{
+            border: none;
+            box-shadow: none;
+            outline: none;
+          }
+        }
+      }
+      .table-col-1{
+        flex: 1;
+        border-right:1px solid #9babb8;
+        margin-right: -1px;
+      }
+      .table-col-3{
+        flex: 3;
+        border-right:1px solid #9babb8;
+        margin-right: -1px;
+      }
     }
     .questionnaire-mid{
       width: 923px;
@@ -98,6 +132,11 @@
     height: 163px;
     padding: 10px;
     color: #222;
+    outline:none;
+  }
+  .ant-input:focus{
+    border-color: #841354;
+    box-shadow: none;
   }
 }
 

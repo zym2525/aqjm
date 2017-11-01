@@ -13,7 +13,8 @@ export {
   showSuccess,
   showInfo,
   hint,
-  createMap
+  createMap,
+  extend
 } from  './common';
 
 export {

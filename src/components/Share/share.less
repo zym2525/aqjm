@@ -19,6 +19,11 @@
   .share-item{
     margin: 0 auto 1px;
     cursor: pointer;
+    a{
+      display: block;
+      width: 100%;
+      height:100%;
+    }
     &.share-left-item{
       width: 51px;
       height:52px;
@@ -54,8 +59,12 @@
         background-image:url("../../../images/facebook.jpg");
       }
       &:last-child{
-        background-image:url("../../../images/erweima.jpg");
+        width: 78px;
+        background:url("../../../images/erweima.jpg") no-repeat center 0;
       }
     }
   }
+}
+.ant-popover{
+  z-index: 9999999!important;
 }

@@ -37,14 +37,17 @@ class Detail extends React.Component {
     }
 
     componentDidMount() {
-      let data={
-        type:this.props.params.id
-      };
-      postData(api+'/api/theme/list',data,(result)=>{
-        this.setState({
-          data:result.content[0]
+      let id=this.props.params.id;
+      if(id>=10){
+        let data={
+          type:id
+        };
+        postData(api+'/api/theme/list',data,(result)=>{
+          this.setState({
+            data:result.content[0]
+          });
         });
-      });
+      }
     }
 }
 export default Detail

@@ -78,3 +78,14 @@ export function createMap(id,address,labels){
   });
   localSearch.search(address);
 }
+
+export function extend(option,oldState) {
+  if(oldState){
+    for (var key in oldState) {
+      if(!option[key]){
+        option[key]=oldState[key]
+      }
+    }
+  }
+  return option;
+}
