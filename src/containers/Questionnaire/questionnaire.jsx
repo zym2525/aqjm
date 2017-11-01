@@ -10,6 +10,7 @@ const { TextArea } = Input;
 
 const exerciseArr=['first','second','third','fourth','fifth','sixth','seventh','eighth','ninth','tenth','eleventh','twelfth','thirteenth','fourteenth','fifteenth','sixteenth','seventeenth','eighteenth','nineteenth'];
 const messageArr=['bFirst','bSecond','bThird'];
+
 import './questionnaire.less'
 class Questionnaire extends React.Component {
   constructor(props, context) {
@@ -36,13 +37,19 @@ class Questionnaire extends React.Component {
         bFourth:'',
         bFifth:''
       },
-      exercise:[...exercises.map((x)=>'')]
+      exercise:[...exercises.map((x)=>'')],
+      twentiethFirst:'',
+      twentiethSecond:'',
+      twentiethThird:'',
+      twentiethFourth:'',
+      twentiethFifth:''
     }
   }
 
   render() {
         let {bFourth,bFifth}=this.state.textareaInfo;
         let {name,age,sex,profession,income,area,mobileNo,education}=this.state.userInfo;
+        let {twentiethFirst,twentiethSecond,twentiethThird,twentiethFourth,twentiethFifth}=this.state;
         return (
             <div className="questionnaire-wrapper">
               <section className="questionnaire">
@@ -90,10 +97,26 @@ class Questionnaire extends React.Component {
                 {
                   exercises.map((exercise,index)=>
                     <div key={index} className="exercise-cell">
-                      <Exercise type={2} content={exercise.content} answers={exercise.answers} index={index+1} serial={index==exercises.length-1?2:1} getAnswer={this.getAnswer.bind(this)}/>
+                      <Exercise type={2} content={exercise.content} answers={exercise.answers} index={index+1} serial={1} getAnswer={this.getAnswer.bind(this)}/>
                     </div>
                   )
                 }
+                <div className="exercise">
+                  <div className="exercise-content">20.小调查</div>
+                  <ul className="exercise-answer clearfix survey">
+                    <li >1.你平时一次约会愿意花多少钱？<Input name="twentiethFirst" value={twentiethFirst} style={{width:'30%'}} onChange={this.handleSnv.bind(this)}/></li>
+                    <li>2.你平时衣服价位是多少？<Input name="twentiethSecond" value={twentiethSecond} style={{width:'30%'}} onChange={this.handleSnv.bind(this)}/></li>
+                    <li>3.如果女生让你开车去接她，你开什么车去接她？
+                      <TextArea name="twentiethThird" value={twentiethThird} onChange={this.handleSnv.bind(this)}/>
+                    </li>
+                    <li>4.你有没有开始健身？是健身卡还是私人教练？
+                      <TextArea name="twentiethFourth" value={twentiethFourth} onChange={this.handleSnv.bind(this)}/>
+                    </li>
+                    <li>5.你觉得你的性格是？
+                      <TextArea name="twentiethFifth" value={twentiethFifth} onChange={this.handleSnv.bind(this)}/>
+                    </li>
+                  </ul>
+                </div>
                 {
                   this.state.isSave
                     ?<Button type="primary" className="exercise-btn">本活动最终解释权归爱情解码所有</Button>
@@ -166,21 +189,58 @@ class Questionnaire extends React.Component {
       };
     });
   }
+  handleSnv({target}){
+    let json={};
+    json[target.name]=target.value;
+    this.setState(json);
+  }
   save(){
-    let {userInfo,message,textareaInfo,exercise}=this.state;
+    let {userInfo,message,textareaInfo,exercise,twentiethFirst,twentiethSecond,twentiethThird,twentiethFourth,twentiethFifth}=this.state;
+    let data={};
     for(var key in userInfo){
       if(userInfo[key]==''){
         hint('warning','请完善个人信息');
         return;
+      }else{
+        data[key]=userInfo[key];
       }
     }
-
-    let data=extend(userInfo,textareaInfo);
+    for(var key in message){
+      if(message[key]==''){
+        hint('warning','请完成问卷上的题目');
+        return;
+      }else{
+        data[key]=message[key];
+      }
+    }
+    for(var key in textareaInfo){
+      if(textareaInfo[key]==''){
+        hint('warning','请完成问卷上的题目');
+        return;
+      }else{
+        data[key]=textareaInfo[key];
+      }
+    }
     let exerciseAnswer={};
-    exercise.map((item,index)=>{
-      exerciseAnswer[exerciseArr[index]]=item;
-    });
+    for(let i=0;i<exercise.length;i++){
+      if(exercise[i]==''){
+        hint('warning','请完成问卷上的题目');
+        return
+      }else{
+        exerciseAnswer[exerciseArr[i]]=exercise[i];
+      }
+    }
     data=extend(data,exerciseAnswer);
+    if(!twentiethFirst||!twentiethSecond||!twentiethThird||!twentiethFourth||!twentiethFifth){
+      hint('warning','请完成小调查');
+      return
+    }else{
+      data.twentiethFirst=twentiethFirst;
+      data.twentiethSecond=twentiethSecond;
+      data.twentiethThird=twentiethThird;
+      data.twentiethFourth=twentiethFourth;
+      data.twentiethFifth=twentiethFifth;
+    }
     postData(api+'/api/theme/save',data,(result)=>{
       hint('success','问卷已提交');
       this.setState({

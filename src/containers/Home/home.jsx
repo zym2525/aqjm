@@ -53,5 +53,8 @@ class Home extends React.Component {
         });
       };
     }
+  componentWillUnmount(){
+    window.onscroll=null;
+  }
 }
 export default Home;
