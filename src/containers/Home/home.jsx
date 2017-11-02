@@ -5,9 +5,11 @@ import ShareRight from '../../components/Share/shareRight.jsx'
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import About from '../About/about.jsx'
 import Service from '../Service/service.jsx'
-import Case from '../Case/case.jsx'
+import Layout from '../Layout/_layout.jsx'
 import Contact from '../Contact/contact.jsx'
 import Foot from '../Foot/foot.jsx'
+import { Tabs } from 'antd';
+const TabPane = Tabs.TabPane;
 
 import './home.less'
 import '../../static/css/animation.less'
@@ -37,7 +39,24 @@ class Home extends React.Component {
               </ReactCSSTransitionGroup>
                 <About/>
                 <Service/>
-                <Case/>
+                <div className="home-case">
+                  <Layout bgTitle="SERVICE CASE" title="服务案例" bgClass="case-bg" tClass="case-t">
+                    <div className="home-case-box">
+                      <Tabs defaultActiveKey="1" onChange={this.callback.bind(this)}>
+                        <TabPane tab="私人情感诊断" key="1"></TabPane>
+                        <TabPane tab="两性关系课程" key="2"></TabPane>
+                        <TabPane tab="私教针对指导" key="3"></TabPane>
+                        <TabPane tab="婚恋关系挽回" key="4"></TabPane>
+                      </Tabs>
+                      <ul className="clearfix">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </Layout>
+                </div>
                 <Contact/>
                 <Foot/>
             </div>
@@ -55,6 +74,9 @@ class Home extends React.Component {
     }
   componentWillUnmount(){
     window.onscroll=null;
+  }
+  callback(){
+
   }
 }
 export default Home;

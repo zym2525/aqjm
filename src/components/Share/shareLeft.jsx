@@ -18,7 +18,7 @@ class ShareLeft extends React.Component {
                   <li key={index} className="share-item share-left-item"><a target="_blank" href={item}></a></li>
                 )
               }
-              <li className="share-item share-left-item"></li>
+
             </ul>
         );
     }

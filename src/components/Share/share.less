@@ -2,19 +2,19 @@
   position: fixed;
   top:50%;
   width: 80px;
-  border:1px solid #e42779;
+  //border:1px solid #e42779;
   border-radius: 36px;
   z-index: 99999;
-  background: url("../../../images/share.png") no-repeat center 2px #fff;
+ // background: url("../../../images/share.png") no-repeat center 2px #fff;
   &.share-left{
-    left: 58px;
+    left: 20px;
     height: 290px;
     margin-top: -149px;
   }
   &.share-right{
-    right: 58px;
-    height: 346px;
-    margin-top: -173px;
+    right: 20px;
+    height: 290px;
+    margin-top: -149px;
   }
   .share-item{
     margin: 0 auto 1px;
@@ -28,6 +28,7 @@
       width: 51px;
       height:52px;
       border-radius: 3px;
+      margin-bottom: 24px;
       &:first-child{
         margin-top: 58px;
         background-image:url("../../../images/sina.jpg");
@@ -38,9 +39,9 @@
       &:nth-child(3){
         background-image:url("../../../images/tieba.jpg");
       }
-      &:last-child{
-        background-image:url("../../../images/weixin.jpg");
-      }
+      //&:last-child{
+      //  background-image:url("../../../images/weixin.jpg");
+      //}
     }
     &.share-right-item{
       width: 47px;
@@ -50,18 +51,18 @@
       margin-bottom: 24px;
       &:first-child{
         margin-top: 58px;
-        background-image:url("../../../images/qq.jpg");
+        background-image:url("../../../images/qq.png");
       }
       &:nth-child(2){
-        background-image:url("../../../images/dianhua.jpg");
+        background-image:url("../../../images/weixin.png");
       }
       &:nth-child(3){
         background-image:url("../../../images/facebook.jpg");
       }
-      &:last-child{
-        width: 78px;
-        background:url("../../../images/erweima.jpg") no-repeat center 0;
-      }
+      //&:last-child{
+      //  width: 78px;
+      //  background:url("../../../images/erweima.jpg") no-repeat center 0;
+      //}
     }
   }
 }

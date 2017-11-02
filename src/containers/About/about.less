@@ -28,7 +28,11 @@
       left: 50%;
       margin-left:-506px;
       ul{
-        margin-top: 62px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top:50%;
+       transform: translate3d(0,-45%,0);
         li{
 
         }
@@ -105,10 +109,10 @@
         background-image: url("../../../images/photo1.png");
       }
       .photo2{
-        background-image: url("../../../images/photo2.png");
+        background-image: url("../../../images/photo3.png");
       }
       .photo3{
-        background-image: url("../../../images/photo3.png");
+        background-image: url("../../../images/photo5.png");
       }
       .photo4{
         background-image: url("../../../images/photo4.png");
@@ -125,6 +129,7 @@
           width: 274px;
           height:260px;
           margin-right: 38px;
+          margin-left: 100px;
           cursor: pointer;
           background-size: cover;
         }
@@ -161,6 +166,7 @@
               height: 130px;
               margin-right: 16px;
               cursor: pointer;
+              background-size: cover;
               &:last-child{
                 margin-right: 0;
               }

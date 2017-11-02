@@ -59,7 +59,7 @@ class About extends React.Component {
                         <div className="desc-content">{abouts[this.state.currentIndex].moo}</div>
                         <ul className="other-list clearfix">
                           {abouts.map((item,index)=>{
-                            if(index>0){
+                            if(true){
                               return (<li key={index} className={`photo${index+1}`} onMouseOver={this.handleOver.bind(this,index)} onMouseOut={this.handleOut.bind(this,index)}></li>)
                             }
                           })}
@@ -80,9 +80,9 @@ class About extends React.Component {
       });
     }
     handleOut(){
-      this.setState({
-        currentIndex:0
-      });
+      //this.setState({
+      //  currentIndex:0
+      //});
     }
 }
 export default About
