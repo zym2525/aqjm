@@ -23,6 +23,6 @@ export function post (url, paramsObj) {
       'Accept': 'application/json, text/plain, */*',
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: obj2params(paramsObj)
+    body:obj2params(paramsObj)
   })
 }
