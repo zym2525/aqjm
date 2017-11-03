@@ -25,9 +25,12 @@ class Service extends React.Component {
                         <div className="service-text">{item.content}</div>
                       </div>
                       <img src={item.src} alt={item.src}/>
-                      <div className="btn-wrapper">
-                        <More moreFn={this.moreClick.bind(this,index)}/>
-                      </div>
+                      {
+                        false&&
+                        <div className="btn-wrapper">
+                          <More moreFn={this.moreClick.bind(this,index)}/>
+                        </div>
+                      }
                     </li>
                   )}
                 </ul>
