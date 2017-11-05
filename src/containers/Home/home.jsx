@@ -8,8 +8,10 @@ import Service from '../Service/service.jsx'
 import Layout from '../Layout/_layout.jsx'
 import Contact from '../Contact/contact.jsx'
 import Foot from '../Foot/foot.jsx'
+import {mods} from '../../config/home'
 import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
+
 
 import './home.less'
 import '../../static/css/animation.less'
@@ -18,7 +20,8 @@ class Home extends React.Component {
       super(props, context)
       this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
       this.state={
-        isShow:false
+        isShow:false,
+        modIndx:0
       }
     }
 
@@ -49,10 +52,11 @@ class Home extends React.Component {
                         <TabPane tab="婚恋关系挽回" key="4"></TabPane>
                       </Tabs>
                       <ul className="clearfix">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        {
+                          mods[this.state.modIndx].map((item,index)=>
+                            <li key={index}><img src={item}/></li>
+                          )
+                        }
                       </ul>
                     </div>
                   </Layout>
@@ -75,8 +79,10 @@ class Home extends React.Component {
   componentWillUnmount(){
     window.onscroll=null;
   }
-  callback(){
-
+  callback(key){
+    this.setState({
+      modIndx:key-1
+    });
   }
 }
 export default Home;

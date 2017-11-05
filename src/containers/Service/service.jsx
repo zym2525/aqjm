@@ -3,6 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import Layout from '../../containers/Layout/_layout.jsx'
 import {list} from '../../config/service'
 import More from './subPage/More.jsx'
+import Step from './subPage/Step.jsx'
 import {hashHistory} from 'react-router'
 
 import './service.less'

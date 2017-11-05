@@ -1,0 +1,29 @@
+/**
+ * Created by DELL on 2017/11/5.
+ */
+export const mods=[
+  [
+    require('../../images/mod1-1.png'),
+    require('../../images/mod1-2.png'),
+    require('../../images/mod1-3.png'),
+    require('../../images/mod1-4.png')
+  ],
+  [
+    require('../../images/mod1-1.png'),
+    require('../../images/mod1-2.png'),
+    require('../../images/mod1-3.png'),
+    require('../../images/mod1-4.png')
+  ],
+  [
+    require('../../images/mod1-1.png'),
+    require('../../images/mod1-2.png'),
+    require('../../images/mod1-3.png'),
+    require('../../images/mod1-4.png')
+  ],
+  [
+    require('../../images/mod1-1.png'),
+    require('../../images/mod1-2.png'),
+    require('../../images/mod1-3.png'),
+    require('../../images/mod1-4.png')
+  ]
+];
