@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import Layout from '../../containers/Layout/_layout.jsx'
-import {list} from '../../config/service'
+import {list,steps} from '../../config/service'
 import More from './subPage/More.jsx'
 import Step from './subPage/Step.jsx'
 import {hashHistory} from 'react-router'
@@ -37,7 +37,16 @@ class Service extends React.Component {
                 </ul>
               </Layout>
               <Layout bgClass="bg-service2" bgTitle="SERVICE PROCESS" title="服务流程" wClass="service-cell">
-
+                <div className="service-step-wrapper">
+                  {
+                    steps.map((step,index)=>
+                      <section key={index}>
+                        <div className={`step-text${index+1} step-text`}>{step.text}</div>
+                        <div className={`step-btn${index+1} step-btn`}><Step index={index+1} content={step.btn}/></div>
+                      </section>
+                    )
+                  }
+                </div>
               </Layout>
             </div>
         );
