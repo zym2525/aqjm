@@ -22,9 +22,6 @@ class Detail extends React.Component {
                     <div className="detail-title fl">{data.title}</div>
                     <div className="detail-time fr">发布日期 {getLocalTime(data.createTime)}</div>
                   </div>
-                  <div className="detail-img">
-                    <img src={data.imgUrlTwo}/>
-                  </div>
                   <div className="detail-text">{data.content}</div>
                 </div>
                 <i className="lt"></i>

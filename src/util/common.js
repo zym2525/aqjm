@@ -9,7 +9,7 @@ import {Modal,message} from 'antd';
 console.log(process.env.NODE_ENV)
 let imgUrl = require('../../images/loading1.gif');
 // https://github.com/BruceCham/react-cli/tree/master/src
-export const api = 'http://120.25.247.79/love';
+export const api = 'http://182.61.30.152/love';
 
 // 转化时间
 export function getLocalTime (dataTime) {
