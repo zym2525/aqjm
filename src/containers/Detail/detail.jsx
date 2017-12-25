@@ -22,7 +22,7 @@ class Detail extends React.Component {
                     <div className="detail-title fl">{data.title}</div>
                     <div className="detail-time fr">发布日期 {getLocalTime(data.createTime)}</div>
                   </div>
-                  <div className="detail-text">{data.content}</div>
+                  <div className="detail-text" dangerouslySetInnerHTML={this.createMarkup.bind(this)()}></div>
                 </div>
                 <i className="lt"></i>
                 <i className="lb"></i>
@@ -32,7 +32,10 @@ class Detail extends React.Component {
             </div>
         );
     }
-
+    createMarkup() {
+      let {data}=this.state;
+      return {__html: data.content};
+    }
     componentDidMount() {
       let id=this.props.params.id;
       if(id>=10){

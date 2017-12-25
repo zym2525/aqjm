@@ -40,7 +40,8 @@ class TextList extends React.Component {
                       <div className="case-article">
                         <h3 className="article-title">{data.title}</h3>
                         <div className="article-content">
-                          {data.content.substring(0,110)}...<a className="more" onClick={this.handleClick.bind(this,type)}>[查看更多]</a>
+                          <div style={{height:'200px'}} dangerouslySetInnerHTML={this.createMarkup.bind(this)()}></div>
+                          <a className="more" onClick={this.handleClick.bind(this,type)}>[查看更多]</a>
                         </div>
                       </div>
                     </div>
@@ -50,6 +51,10 @@ class TextList extends React.Component {
             </Layout>
           </div>
         );
+    }
+    createMarkup() {
+      let {data}=this.props;
+      return {__html: data.content};
     }
     handleTab(index){
       this.setState({
