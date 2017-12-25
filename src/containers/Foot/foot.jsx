@@ -39,7 +39,7 @@ class Foot extends React.Component {
                 </li>
               </ul>
               <div className="f-text1 f-text">XXX © 2017.All Rights Reserved</div>
-              <div className="f-text2 f-text">备案号：京icp备234566-6</div>
+              <div className="f-text2 f-text">备案号：粤ICP备17135718号-2</div>
             </section>
           </footer>
         );

@@ -23,7 +23,7 @@ class About extends React.Component {
                     <li className="clearfix">
                       <div className="list-item" style={{marginTop:'0'}}>
                         <i className="icon fl"></i>
-                        <span className="text one">爱情解码作为正规情感服务企业，拥有专业的师资团队以及多年丰富的教学经验与实用性理论，从根源上帮助客户更好的解决情感问题和能力提升。</span>
+                        <span className="text one">爱情解码是广州关鸠文化发展有限公司创立的品牌 ，爱情解码作为正规情感服务企业，拥有专业的师资团队以及多年丰富的教学经验与实用性理论，从根源上帮助客户更好的解决情感问题和能力提升。</span>
                       </div>
                     </li>
                     <li className="clearfix">
