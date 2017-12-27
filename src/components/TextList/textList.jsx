@@ -40,7 +40,7 @@ class TextList extends React.Component {
                       <div className="case-article">
                         <h3 className="article-title">{data.title}</h3>
                         <div className="article-content">
-                          <div style={{height:'200px'}} dangerouslySetInnerHTML={this.createMarkup.bind(this)()}></div>
+                          <div style={{height:'220px',overflow:'hidden'}} dangerouslySetInnerHTML={this.createMarkup.bind(this)()}></div>
                           <a className="more" onClick={this.handleClick.bind(this,type)}>[查看更多]</a>
                         </div>
                       </div>
